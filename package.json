@@ -78,8 +78,11 @@
   },
   "scripts": {
     "serve": "caddy & npm run watch",
+    "servep": "caddy --conf Caddyfilep",
     "bundle": "jspm bundle webapp/index.js -wid",
     "unbundle": "jspm unbundle webapp/index.js",
+    "build": "jspm build webapp/index.js dist/bundled.js --skip-rollup --format umd --skip-source-maps --minify",
+    "build-dev": "jspm build webapp/index.js dist/bundled.js --skip-rollup --format umd",
     "watch": "npm run bundle"
   },
   "name": "play-web-component",
