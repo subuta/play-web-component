@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="/jspm_packages/system.js"></script>
     <script src="/jspm.config.js"></script>
+    <style>
+      body {
+        margin: 0
+      }
+    </style>
 </head>
 <body>
 <script>
@@ -18,6 +23,12 @@
     }
     System.import('/webapp/index.js');
 </script>
-<div id="app-container"></div>
+<x-cards>
+  <x-card>one</x-card>
+  <x-card>two</x-card>
+  <x-card>three</x-card>
+  <x-card>four</x-card>
+  <x-card>fifth</x-card>
+</x-cards>
 </body>
 </html>

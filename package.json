@@ -1,17 +1,85 @@
 {
   "jspm": {
-    "name": "play-web-component",
     "main": "app.js",
+    "dependencies": {
+      "free-style": "npm:free-style@^2.0.0",
+      "jspm-caddy-hmr": "npm:jspm-caddy-hmr@^0.2.10",
+      "skatejs": "npm:skatejs@^3.1.0",
+      "skatejs-web-components": "npm:skatejs-web-components@^1.2.4"
+    },
     "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4",
       "plugin-babel": "npm:systemjs-plugin-babel@^0.0.16"
+    },
+    "peerDependencies": {
+      "assert": "github:jspm/nodelibs-assert@^0.2.0-alpha",
+      "buffer": "github:jspm/nodelibs-buffer@^0.2.0-alpha",
+      "child_process": "github:jspm/nodelibs-child_process@^0.2.0-alpha",
+      "constants": "github:jspm/nodelibs-constants@^0.2.0-alpha",
+      "crypto": "github:jspm/nodelibs-crypto@^0.2.0-alpha",
+      "events": "github:jspm/nodelibs-events@^0.2.0-alpha",
+      "fs": "github:jspm/nodelibs-fs@^0.2.0-alpha",
+      "os": "github:jspm/nodelibs-os@^0.2.0-alpha",
+      "path": "github:jspm/nodelibs-path@^0.2.0-alpha",
+      "process": "github:jspm/nodelibs-process@^0.2.0-alpha",
+      "stream": "github:jspm/nodelibs-stream@^0.2.0-alpha",
+      "string_decoder": "github:jspm/nodelibs-string_decoder@^0.2.0-alpha",
+      "timers": "github:jspm/nodelibs-timers@^0.2.0-alpha",
+      "util": "github:jspm/nodelibs-util@^0.2.0-alpha",
+      "vm": "github:jspm/nodelibs-vm@^0.2.0-alpha"
+    },
+    "overrides": {
+      "npm:babel-core@5.8.38": {
+        "main": "browser.js",
+        "dependencies": {},
+        "jspmNodeConversion": false,
+        "map": {
+          "regenerator/runtime": "babel-runtime/regenerator/runtime"
+        },
+        "meta": {
+          "browser.js": {
+            "exports": "babel",
+            "format": "global"
+          }
+        }
+      },
+      "npm:babel-runtime@5.8.38": {
+        "main": false,
+        "dependencies": {},
+        "optionalDependencies": {
+          "core-js": "^1.2.0"
+        }
+      },
+      "npm:inherits@2.0.1": {
+        "ignore": [
+          "test.js",
+          "node_modules"
+        ]
+      },
+      "npm:inherits@2.0.3": {
+        "ignore": [
+          "test.js",
+          "node_modules"
+        ]
+      },
+      "npm:lodash@4.16.4": {
+        "map": {
+          "buffer": "@empty",
+          "process": "@empty"
+        }
+      }
     }
   },
   "devDependencies": {
+    "jspm": "^0.17.0-beta.29",
     "jspm-caddy-hmr": "^0.2.10"
   },
   "scripts": {
     "serve": "caddy & npm run watch",
     "bundle": "jspm bundle webapp/index.js -wid",
+    "unbundle": "jspm unbundle webapp/index.js",
     "watch": "npm run bundle"
   },
   "name": "play-web-component",
