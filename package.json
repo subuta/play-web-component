@@ -1,0 +1,35 @@
+{
+  "jspm": {
+    "name": "play-web-component",
+    "main": "app.js",
+    "devDependencies": {
+      "plugin-babel": "npm:systemjs-plugin-babel@^0.0.16"
+    }
+  },
+  "devDependencies": {
+    "jspm-caddy-hmr": "^0.2.10"
+  },
+  "scripts": {
+    "serve": "caddy & npm run watch",
+    "bundle": "jspm bundle webapp/index.js -wid",
+    "watch": "npm run bundle"
+  },
+  "name": "play-web-component",
+  "description": "playing with web-component",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subuta/play-web-component.git"
+  },
+  "keywords": [
+    "web-compoennt",
+    "jspm",
+    "component"
+  ],
+  "author": "subuta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/subuta/play-web-component/issues"
+  },
+  "homepage": "https://github.com/subuta/play-web-component#readme"
+}
