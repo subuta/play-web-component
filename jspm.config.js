@@ -35,10 +35,12 @@ SystemJS.config({
     'github:*/*.json'
   ],
   map: {
+    'autoprefixer': 'npm:autoprefixer@6.5.1',
     'child_process': 'github:jspm/nodelibs-child_process@0.2.0-alpha',
     'events': 'github:jspm/nodelibs-events@0.2.0-alpha',
     'free-style': 'npm:free-style@2.0.0',
     'path': 'github:jspm/nodelibs-path@0.2.0-alpha',
+    'postcss-js': 'npm:postcss-js@0.1.3',
     'skatejs': 'npm:skatejs@3.1.0',
     'skatejs-web-components': 'npm:skatejs-web-components@1.2.4',
     'string_decoder': 'github:jspm/nodelibs-string_decoder@0.2.0-alpha',
@@ -53,7 +55,8 @@ SystemJS.config({
     'stream': 'github:jspm/nodelibs-stream@0.2.0-alpha',
     'timers': 'github:jspm/nodelibs-timers@0.2.0-alpha',
     'util': 'github:jspm/nodelibs-util@0.2.0-alpha',
-    'vm': 'github:jspm/nodelibs-vm@0.2.0-alpha'
+    'vm': 'github:jspm/nodelibs-vm@0.2.0-alpha',
+    'webcomponents.js': 'npm:webcomponents.js@0.7.22'
   },
   packages: {
     'github:jspm/nodelibs-string_decoder@0.2.0-alpha': {
@@ -305,6 +308,59 @@ SystemJS.config({
     'npm:timers-browserify@1.4.2': {
       'map': {
         'process': 'npm:process@0.11.9'
+      }
+    },
+    'npm:autoprefixer@6.5.1': {
+      'map': {
+        'normalize-range': 'npm:normalize-range@0.1.2',
+        'postcss-value-parser': 'npm:postcss-value-parser@3.3.0',
+        'num2fraction': 'npm:num2fraction@1.2.2',
+        'browserslist': 'npm:browserslist@1.4.0',
+        'postcss': 'npm:postcss@5.2.4',
+        'caniuse-db': 'npm:caniuse-db@1.0.30000557'
+      }
+    },
+    'npm:postcss-js@0.1.3': {
+      'map': {
+        'postcss': 'npm:postcss@5.2.4',
+        'camelcase-css': 'npm:camelcase-css@1.0.1'
+      }
+    },
+    'npm:browserslist@1.4.0': {
+      'map': {
+        'caniuse-db': 'npm:caniuse-db@1.0.30000557'
+      }
+    },
+    'npm:postcss@5.2.4': {
+      'map': {
+        'js-base64': 'npm:js-base64@2.1.9',
+        'supports-color': 'npm:supports-color@3.1.2',
+        'chalk': 'npm:chalk@1.1.3',
+        'source-map': 'npm:source-map@0.5.6'
+      }
+    },
+    'npm:chalk@1.1.3': {
+      'map': {
+        'supports-color': 'npm:supports-color@2.0.0',
+        'escape-string-regexp': 'npm:escape-string-regexp@1.0.5',
+        'has-ansi': 'npm:has-ansi@2.0.0',
+        'strip-ansi': 'npm:strip-ansi@3.0.1',
+        'ansi-styles': 'npm:ansi-styles@2.2.1'
+      }
+    },
+    'npm:supports-color@3.1.2': {
+      'map': {
+        'has-flag': 'npm:has-flag@1.0.0'
+      }
+    },
+    'npm:strip-ansi@3.0.1': {
+      'map': {
+        'ansi-regex': 'npm:ansi-regex@2.0.0'
+      }
+    },
+    'npm:has-ansi@2.0.0': {
+      'map': {
+        'ansi-regex': 'npm:ansi-regex@2.0.0'
       }
     }
   }

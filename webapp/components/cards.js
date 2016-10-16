@@ -1,11 +1,16 @@
 import 'skatejs-web-components';
 import * as skate from 'skatejs';
 import FreeStyle from 'free-style';
+import postcssJs from 'postcss-js';
+import autoprefixer from 'autoprefixer';
 
 const Style = FreeStyle.create();
+const prefixer = postcssJs.sync([
+  autoprefixer
+]);
 
 // Register a new style, returning a class name to use.
-var CardsStyle = Style.registerStyle({
+var CardsStyle = Style.registerStyle(prefixer({
   padding: 8,
   display: 'flex',
   alignItems: 'flex-start',
@@ -13,7 +18,11 @@ var CardsStyle = Style.registerStyle({
   flexWrap: 'wrap',
   width: '100vw',
   boxSizing: 'border-box'
-});
+}));
+
+Style.registerRule('slot', prefixer({
+  flex: '0 0 33.3%'
+}));
 
 skate.define('x-cards', {
   render(elem) {

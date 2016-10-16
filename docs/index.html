@@ -5,6 +5,12 @@
   <title>play-web-component</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="./bundled.js"></script>
+  <script>
+    window.addEventListener('WebComponentsReady', function(e) {
+      // imports are loaded and elements have been registered
+      console.log('Components are ready');
+    });
+  </script>
   <link rel="shortcut icon" href="favicon.ico">
   <style>
     body {

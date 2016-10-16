@@ -1,22 +1,27 @@
 import 'skatejs-web-components';
 import * as skate from 'skatejs';
 import FreeStyle from 'free-style';
+import postcssJs from 'postcss-js';
+import autoprefixer from 'autoprefixer';
 
 const Style = FreeStyle.create();
+const prefixer = postcssJs.sync([
+  autoprefixer
+]);
 
 // Register a new style, to host
-Style.registerRule(':host', {
+Style.registerRule(':host', prefixer({
   flex: '0 0 33.3%'
-});
+}));
 
-var CardStyle = Style.registerStyle({
+var CardStyle = Style.registerStyle(prefixer({
   border: '1px solid #ddd',
   margin: 8,
   height: 100,
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center'
-});
+}));
 
 skate.define('x-card', {
   render(elem) {

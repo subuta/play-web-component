@@ -21,6 +21,12 @@
             new Watcher.default('/watch');  // chokidar-socket-emitter port
         });
     }
+
+    window.addEventListener('WebComponentsReady', function(e) {
+      // imports are loaded and elements have been registered
+      console.log('Components are ready');
+    });
+
     System.import('/webapp/index.js');
 </script>
 <x-cards>
