@@ -88,12 +88,12 @@
     "build-dev": "jspm build webapp/index.js dist/bundled.js --skip-rollup --format umd",
     "watch": "npm run bundle"
   },
-  "name": "play-web-component",
+  "name": "play-web-skatejs",
   "description": "playing with web-component",
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/subuta/play-web-component.git"
+    "url": "git+https://github.com/subuta/play-web-skatejs.git"
   },
   "keywords": [
     "web-compoennt",
@@ -103,7 +103,7 @@
   "author": "subuta",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/subuta/play-web-component/issues"
+    "url": "https://github.com/subuta/play-web-skatejs/issues"
   },
-  "homepage": "https://github.com/subuta/play-web-component#readme"
+  "homepage": "https://github.com/subuta/play-web-skatejs#readme"
 }

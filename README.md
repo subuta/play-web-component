@@ -1,8 +1,8 @@
-# play-web-component
+# play-web-skatejs
 playing with web-component.
 
 ## Demo
-https://subuta.github.io/play-web-component/
+https://subuta.github.io/play-web-skatejs/
 
 ### ポイント
 - [SkateJS](https://github.com/skatejs/skatejs)を利用してWebComponentを定義。
